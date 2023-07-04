@@ -12,6 +12,7 @@ namespace Cards8SuitsAndValues
 
         static void Main()
         {
+            List<Card> cards = new List<Card>();
             
         }
 
@@ -21,6 +22,13 @@ namespace Cards8SuitsAndValues
             return new Card((Values)random.Next(0, 14), (Suits)random.Next(0,3));
         }
 
-        static PrintCards
+        static void PrintCards(List<Card> cards)
+        {
+            foreach(Card card in cards)
+            {
+                Console.WriteLine($"{card.Value} of {card.Suit}.");
+            }
+
+        }
     }
 }
