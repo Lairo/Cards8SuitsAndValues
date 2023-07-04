@@ -4,6 +4,7 @@
     {
         public Values Value { get; set; }
         public Suits Suit { get; set; }
+        public string Name { get { return $"{Value} of {Suit}"; } }
 
         public Card(Values value, Suits suit)
         {
